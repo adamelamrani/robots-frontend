@@ -1,4 +1,4 @@
-import StyledNav from "./SyledNav";
+import StyledNav from "./StyledNav";
 
 const NavComponent = () => {
   return (

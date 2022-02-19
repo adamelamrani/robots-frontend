@@ -2,5 +2,5 @@ projectKey=w06chwe-front
 serverUrl=http://localhost:9000
 serverVersion=9.2.4.50792
 dashboardUrl=http://localhost:9000/dashboard?id=w06chwe-front
-ceTaskId=AX8ReErtreSv4uMenLVC
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AX8ReErtreSv4uMenLVC
+ceTaskId=AX8RqIR5reSv4uMenLVE
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AX8RqIR5reSv4uMenLVE
