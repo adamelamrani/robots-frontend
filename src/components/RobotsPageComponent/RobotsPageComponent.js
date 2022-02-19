@@ -1,10 +1,13 @@
+import RobotComponent from "../RobotComponent/RobotComponent";
 import { RobotsPageStyled, RobotsPageHeadingStyled } from "./RobotsPageStyled";
 
 const RobotsPageComponent = () => {
   return (
     <>
       <RobotsPageHeadingStyled>Robots List</RobotsPageHeadingStyled>
-      <RobotsPageStyled></RobotsPageStyled>
+      <RobotsPageStyled title="robots-list">
+        <RobotComponent />
+      </RobotsPageStyled>
     </>
   );
 };

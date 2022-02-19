@@ -1,17 +1,19 @@
-const Robot = (name, speed, resistance, date) => {
+import StyledRobot from "./StyledRobot";
+
+const RobotComponent = (name, speed, resistance, date) => {
   return (
     <>
-      <li>
-        <h2>Name: {name}</h2>
-        <img src="" alt={`Robot ${name}`} />
+      <StyledRobot>
+        <h2>Name: </h2>
+        <img src="" alt={`Robot `} />
         <ul>
-          <li>Speed: {speed};</li>
-          <li>Resistance: {resistance};</li>
-          <li>Creation date: {date};</li>
+          <li>Speed: ;</li>
+          <li>Resistance: ;</li>
+          <li>Creation date: ;</li>
         </ul>
-      </li>
+      </StyledRobot>
     </>
   );
 };
 
-export default Robot;
+export default RobotComponent;
