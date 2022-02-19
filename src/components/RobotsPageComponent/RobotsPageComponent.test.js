@@ -1,4 +1,6 @@
 import { render, screen } from "@testing-library/react";
+import { Provider } from "react-redux";
+import store from "../../redux/store/store";
 import RobotsPageComponent from "./RobotsPageComponent";
 
 describe("Given a RobotsPageComponent", () => {
@@ -6,7 +8,11 @@ describe("Given a RobotsPageComponent", () => {
     test("Then it should display a heading with 'Robots List' text in it", () => {
       const expectedText = "Robots List";
 
-      render(<RobotsPageComponent />);
+      render(
+        <Provider store={store}>
+          <RobotsPageComponent />{" "}
+        </Provider>
+      );
 
       const expectedOutput = screen.getByRole("heading", {
         name: /robots list/i,
@@ -17,7 +23,11 @@ describe("Given a RobotsPageComponent", () => {
   });
 
   test("Then it should render a list", () => {
-    render(<RobotsPageComponent />);
+    render(
+      <Provider store={store}>
+        <RobotsPageComponent />
+      </Provider>
+    );
 
     const expectedElement = screen.getAllByRole("list", {
       name: "robots-list",
@@ -28,7 +38,11 @@ describe("Given a RobotsPageComponent", () => {
 
   describe("When ul is rendereded", () => {
     test("Then it should render another list inside of it", () => {
-      render(<RobotsPageComponent />);
+      render(
+        <Provider store={store}>
+          <RobotsPageComponent />
+        </Provider>
+      );
 
       const expectedParentElement = screen.getAllByRole("list");
       const expectedDescendant = screen.getAllByRole("list");

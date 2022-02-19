@@ -14,14 +14,14 @@ const StyledRobot = styled.li`
     text-align: center;
   }
 
-  ul {
+  span {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     list-style: none;
     padding: 0;
 
-    li {
+    p {
       display: flex;
       flex-direction: row;
       justify-content: space-evenly;
