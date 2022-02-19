@@ -19,8 +19,21 @@ describe("Given a RobotsPageComponent", () => {
   test("Then it should render a list", () => {
     render(<RobotsPageComponent />);
 
-    const expectedElement = screen.getByRole("list");
+    const expectedElement = screen.getAllByRole("list", {
+      name: "robots-list",
+    });
 
-    expect(expectedElement).toBeInTheDocument();
+    expect(expectedElement[0]).toBeInTheDocument();
+  });
+
+  describe("When ul is rendereded", () => {
+    test("Then it should render another list inside of it", () => {
+      render(<RobotsPageComponent />);
+
+      const expectedParentElement = screen.getAllByRole("list");
+      const expectedDescendant = screen.getAllByRole("list");
+
+      expect(expectedParentElement[0]).toContainElement(expectedDescendant[0]);
+    });
   });
 });
