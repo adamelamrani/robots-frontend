@@ -1,16 +1,16 @@
 import StyledRobot from "./StyledRobot";
 
-const RobotComponent = (name, speed, resistance, date) => {
+const RobotComponent = ({ name, speed, resistance, date, id, img }) => {
   return (
     <>
-      <StyledRobot>
-        <h2>Name: </h2>
-        <img src="" alt={`Robot `} />
-        <ul>
-          <li>Speed: ;</li>
-          <li>Resistance: ;</li>
-          <li>Creation date: ;</li>
-        </ul>
+      <StyledRobot key={id}>
+        <h2>Name: {name}</h2>
+        <img src={img} alt={`Robot ${name}`} />
+        <span>
+          <p>Speed: {speed}</p>
+          <p>Resistance: {resistance}</p>
+          <p>Creation date: {date}</p>
+        </span>
       </StyledRobot>
     </>
   );
