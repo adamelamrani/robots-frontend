@@ -8,9 +8,9 @@ function App() {
      <NavComponent />
       <h1>Robots</h1>
       <RobotsPageComponent />
-      <Routes>
-        <Route path="/*" element={<RobotsPageComponent />}></Route>
-      </Routes>
+        <Routes>
+          <Route path="/*" element={<RobotsPageComponent />}></Route>
+        </Routes>
     </>
   );
 }
