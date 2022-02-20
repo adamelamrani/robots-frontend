@@ -10,7 +10,6 @@ export const loadRobotsListThunk = async (dispatch) => {
 export const removeRobotThunk = (id) => async (dispatch) => {
   const response = await fetch((`${process.env.REACT_APP_API_URL}${id}`), {method: "DELETE",});
   const robot = await response.json();
-  console.log(robot.robot.id);
   dispatch(deleteRobotAction(robot.robot.id));
 }
 
