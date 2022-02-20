@@ -97,18 +97,19 @@ describe("Given a robotsReducer function", () => {
   });
 
   describe("When it receives an array of robots and delete type with id 1", () => {
-    test("Then it should return an array with the object with id 1", () => {
-      const expectedOutput = [
+    test("Then it should return an array with the object with id 2", () => {
+      const expectedOutput = [];
+      const array = [
         {
           name: "robot2",
           speed: 2,
           resistance: 3,
-          id: 2,
+          _id: 2,
         },
       ];
-      const id = 1;
+      const id = 2;
       const action = { type: "delete-robot", id: id };
-      const newState = robotsReducer(arrayOfRobots, action);
+      const newState = robotsReducer(array, action);
 
       expect(newState).toEqual(expectedOutput);
     });

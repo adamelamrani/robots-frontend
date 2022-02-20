@@ -15,12 +15,13 @@ const robotsReducer = (robots = [], action = {}) => {
       );
       break;
     case actionTypes.deleteRobot:
-      newRobotsState = robots.filter((robot) => robot.id !== action.id);
+      newRobotsState = robots.filter((robot) => robot._id !== action.id);   
       break;
     default:
       newRobotsState = [...robots];
   }
   return newRobotsState;
+  
 };
 
 export default robotsReducer;
