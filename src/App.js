@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import NavComponent from "./components/NavComponent/NavComponent";
+import RobotDetailsPage from "./components/RobotDetailsPage/RobotDetailsPage";
 import RobotsPageComponent from "./components/RobotsPageComponent/RobotsPageComponent";
 
 function App() {
@@ -7,9 +8,9 @@ function App() {
     <>
       <NavComponent />
       <h1>Robots</h1>
-      <RobotsPageComponent />
         <Routes>
-          <Route path="/*" element={<RobotsPageComponent />}></Route>
+          <Route path="/robots" element={<RobotsPageComponent />} />
+          <Route path="/robots/:id" element ={<RobotDetailsPage />} />
         </Routes>
     </>
   );
