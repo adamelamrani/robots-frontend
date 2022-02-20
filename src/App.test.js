@@ -9,9 +9,9 @@ describe("Given an app component", () => {
     test("Then it should render a heading with 'Robot's text", () => {
       render(
         <BrowserRouter>
-        <Provider store={store}>
-          <App />
-        </Provider>
+          <Provider store={store}>
+            <App />
+          </Provider>
         </BrowserRouter>
       );
       const screenText = screen.getByRole("heading", { name: "Robots" });
