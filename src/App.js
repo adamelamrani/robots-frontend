@@ -5,7 +5,7 @@ import RobotsPageComponent from "./components/RobotsPageComponent/RobotsPageComp
 function App() {
   return (
     <>
-     <NavComponent />
+      <NavComponent />
       <h1>Robots</h1>
       <RobotsPageComponent />
         <Routes>
