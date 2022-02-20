@@ -10,6 +10,7 @@ const RobotDetailsPage = () => {
   const {id} = useParams()
   const robot = useSelector((state) => state.singleRobot);
   const dispatchId = useDispatch();
+  
   useEffect(() => {
     dispatchId(loadRobotThunk(id));
   }, [dispatchId, id]);
