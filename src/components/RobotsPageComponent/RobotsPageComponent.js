@@ -2,9 +2,10 @@ import RobotComponent from "../RobotComponent/RobotComponent";
 import { RobotsPageStyled, RobotsPageHeadingStyled } from "./RobotsPageStyled";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
-import { loadRobotsListThunk } from "../../redux/thunk/robotsThunk";
+import { loadRobotsListThunk} from "../../redux/thunk/robotsThunk";
 
 const RobotsPageComponent = () => {
+
   const robotsList = useSelector((state) => state.robotsList);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -18,6 +19,7 @@ const RobotsPageComponent = () => {
         {robotsList.map((robot) => {
           return (
             <RobotComponent
+              id={robot._id}
               img={robot.image}
               key={robot._id}
               name={robot.name}
