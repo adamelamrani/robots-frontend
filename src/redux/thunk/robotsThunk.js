@@ -10,6 +10,5 @@ export const loadRobotsListThunk = async (dispatch) => {
 export const loadRobotThunk = (id) => async (dispatch) => {
   const response = await fetch(`${process.env.REACT_APP_API_URL}${id}`);
   const robot = await response.json();
-  console.log("thunk", robot)
   dispatch(loadSingleRobotAction(robot));
 }

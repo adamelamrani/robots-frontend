@@ -5,7 +5,6 @@ const singleRobotReducer = (robot = [], action = {}) => {
   let newRobotsState;
   switch(action.type) {
     case actionTypes.loadRobot:
-      console.log("reducer", action.robot);
       newRobotsState = {...action.robot}
       break;
     default: 
