@@ -1,4 +1,4 @@
-import { loadRobotsAction, loadSingleRobotAction } from "../actions/actionsCreator/actionsCreator";
+import { deleteRobotAction, loadRobotsAction, loadSingleRobotAction } from "../actions/actionsCreator/actionsCreator";
 
 export const loadRobotsListThunk = async (dispatch) => {
   const response = await fetch(process.env.REACT_APP_API_URL);
@@ -6,6 +6,12 @@ export const loadRobotsListThunk = async (dispatch) => {
 
   dispatch(loadRobotsAction(robotsList));
 };
+
+export const removeRobotThunk = (id) => async (dispatch) => {
+  const response = await fetch((`${process.env.REACT_APP_API_URL}${id}`), {method: "DELETE",});
+  const robot = await response.json();
+  dispatch(deleteRobotAction(robot));
+}
 
 export const loadRobotThunk = (id) => async (dispatch) => {
   const response = await fetch(`${process.env.REACT_APP_API_URL}${id}`);

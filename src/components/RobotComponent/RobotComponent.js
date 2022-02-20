@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom";
 import StyledRobot from "./StyledRobot";
 
-const RobotComponent = ({ name, speed, resistance, date, id, img }) => {
+const RobotComponent = ({ name, speed, resistance, date, id, img, actionOnClick }) => {
 
   const navigate = useNavigate();
 
@@ -21,6 +21,7 @@ const RobotComponent = ({ name, speed, resistance, date, id, img }) => {
           <p>Creation date: {date}</p>
         </span>
       </StyledRobot>
+      <button className="remote-robot" onClick={actionOnClick} type="button">Delete</button>
     </>
   );
 };
