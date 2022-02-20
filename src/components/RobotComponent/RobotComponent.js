@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+
 import { useNavigate } from "react-router-dom";
-import { loadRobotThunk } from "../../redux/thunk/robotsThunk";
 import StyledRobot from "./StyledRobot";
 
 const RobotComponent = ({ name, speed, resistance, date, id, img }) => {
@@ -9,16 +7,8 @@ const RobotComponent = ({ name, speed, resistance, date, id, img }) => {
   const navigate = useNavigate();
 
   const onClick = () => {
-    console.log(id);
     navigate(`/robots/${id}`)
   }
-  
-  const dispatchId = useDispatch();
-  useEffect(() => {
-    dispatchId(loadRobotThunk);
-  }, [dispatchId]);
-
-
 
   return (
     <>
