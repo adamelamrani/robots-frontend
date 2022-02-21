@@ -2,6 +2,8 @@ import { useState } from "react"
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createRobotThunk } from "../../redux/thunk/robotsThunk";
+import { StyledButton } from "../RobotComponent/StyledRobot";
+import StyledForm from "./StyledForm";
 
 const CreateRobotForm = () => {
 
@@ -37,7 +39,7 @@ const CreateRobotForm = () => {
   
   return (
     <>
-      <form autoComplete="off" onSubmit={submitRobot}>
+      <StyledForm autoComplete="off" onSubmit={submitRobot}>
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" placeholder="Introduce your name" value={formData.name} onChange={createRobot} />
         <label htmlFor="image">Image URL:</label>
@@ -48,8 +50,8 @@ const CreateRobotForm = () => {
         <input type="number" max="10" name="resistance" id="resistance" placeholder="6" value={formData.resistance} onChange={createRobot} />
         <label htmlFor="date">Date:</label>
         <input type="date" name="date" id="date" value={formData.date} onChange={createRobot} />
-        <button type="submit" disabled={invalidForm}>Create</button>
-      </form>
+        <StyledButton type="submit" disabled={invalidForm}>Create</StyledButton>
+      </StyledForm>
     </>
   )
 }
