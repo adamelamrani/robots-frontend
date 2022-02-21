@@ -1,17 +1,31 @@
 import { Route, Routes } from "react-router-dom";
+import styled from "styled-components";
 import NavComponent from "./components/NavComponent/NavComponent";
 import RobotDetailsPage from "./components/RobotDetailsPage/RobotDetailsPage";
 import RobotsPageComponent from "./components/RobotsPageComponent/RobotsPageComponent";
 
 function App() {
+  const StyledHeading = styled.h1`
+  text-align: center;
+  font-size: 30px;
+  color: gold;
+  `;
+
+  const StyledAppDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  `
   return (
     <>
       <NavComponent />
-      <h1>Robots</h1>
-        <Routes>
+      <StyledHeading>Robots</StyledHeading>
+      <StyledAppDiv className="row col-12">
+      <Routes>
           <Route path="/robots" element={<RobotsPageComponent />} />
           <Route path="/robots/:id" element ={<RobotDetailsPage />} />
         </Routes>
+      </StyledAppDiv>
+        
     </>
   );
 }

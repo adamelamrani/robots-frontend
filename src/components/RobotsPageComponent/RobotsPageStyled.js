@@ -2,14 +2,25 @@ import styled from "styled-components";
 
 const RobotsPageStyled = styled.ul`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  background-color: blue;
+  justify-content: space-evenly;
+  color: gold;
+  max-width: 1200px; 
+
+  img {
+    object-fit: cover ;
+  }
+
+  li{
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const RobotsPageHeadingStyled = styled.h2`
   display: flex;
   justify-content: center;
-  background-color: red;
   color: white;
 `;
 

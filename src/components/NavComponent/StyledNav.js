@@ -8,6 +8,7 @@ const StyledNav = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    box-shadow: 0px 18px 39px 6px rgba(0,0,0,0.62);
 
     li {
       margin: 10px;
