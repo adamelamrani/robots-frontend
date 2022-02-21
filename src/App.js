@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import styled from "styled-components";
+import CreateRobotForm from "./components/CreateRobotForm/CreateRobotForm";
 import NavComponent from "./components/NavComponent/NavComponent";
 import RobotDetailsPage from "./components/RobotDetailsPage/RobotDetailsPage";
 import RobotsPageComponent from "./components/RobotsPageComponent/RobotsPageComponent";
@@ -23,6 +24,7 @@ function App() {
       <Routes>
           <Route path="/robots" element={<RobotsPageComponent />} />
           <Route path="/robots/:id" element ={<RobotDetailsPage />} />
+          <Route path="/robots/create" element={<CreateRobotForm />} />
         </Routes>
       </StyledAppDiv>
         
