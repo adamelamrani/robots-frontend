@@ -7,7 +7,7 @@ const CreateRobotForm = () => {
 
   const emptyRobot = {
     name: "",
-    img: "",
+    image: "",
     speed: "",
     resistance: "",
     date: "",
@@ -22,7 +22,7 @@ const CreateRobotForm = () => {
   };
 
   const invalidForm = formData.name === ""||
-    formData.img === ""||
+    formData.image === ""||
     formData.speed === ""||
     formData.resistance === ""||
     formData.date  === "";
@@ -40,8 +40,8 @@ const CreateRobotForm = () => {
       <form autoComplete="off" onSubmit={submitRobot}>
         <label htmlFor="name">Name:</label>
         <input type="text" name="name" id="name" placeholder="Introduce your name" value={formData.name} onChange={createRobot} />
-        <label htmlFor="img">Image URL:</label>
-        <input type="text" name="img" id="img" placeholder="https://introduceyourimg.com" value={formData.img} onChange={createRobot} />
+        <label htmlFor="image">Image URL:</label>
+        <input type="text" name="image" id="image" placeholder="https://introduceyourimg.com" value={formData.image} onChange={createRobot} />
         <label htmlFor="speed">Speed:</label>
         <input type="number" max="10" name="speed" id="speed" placeholder="6" value={formData.speed} onChange={createRobot} />
         <label htmlFor="resistance">Resistance:</label>
