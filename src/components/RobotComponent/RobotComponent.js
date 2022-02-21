@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import StyledRobot from "./StyledRobot";
+import { StyledRobot, StyledButton, StylishDiv } from "./StyledRobot";
 
 const RobotComponent = ({ name, speed, resistance, date, id, img, actionOnClick }) => {
 
@@ -12,7 +12,8 @@ const RobotComponent = ({ name, speed, resistance, date, id, img, actionOnClick 
 
   return (
     <>
-      <StyledRobot key={id} onClick={onClick}>
+     <StylishDiv>
+        <StyledRobot key={id} onClick={onClick}>
         <h2>Name: {name}</h2>
         <img src={img} alt={`Robot ${name}`} />
         <span>
@@ -21,7 +22,8 @@ const RobotComponent = ({ name, speed, resistance, date, id, img, actionOnClick 
           <p>Creation date: {date}</p>
         </span>
       </StyledRobot>
-      <button className="remote-robot" onClick={actionOnClick} type="button">Delete</button>
+      <StyledButton className="button" onClick={actionOnClick} type="button">Delete</StyledButton>
+     </StylishDiv>
     </>
   );
 };
