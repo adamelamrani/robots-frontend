@@ -9,7 +9,7 @@ const NavComponent = () => {
             <Link to="/robots">Robots List</Link>
           </li>
           <li>
-            <a href="robots">Create a robot</a>
+            <Link to="/robots/create">Create a robot</Link>
           </li>
         </ul>
       </StyledNav>
